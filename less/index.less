@@ -1,3 +1,13 @@
+@background-color: lightgray;
+@text-size: 1.8rem;
+@header3-size: 2.3rem;
+
+.section-spacing {
+	margin: 5%;
+	padding: 3%;
+}
+
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -57,3 +67,39 @@ html, body {
     height: 100%;
 }
 
+// end reset
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	width: 60%;
+	margin: 0 auto;
+	font-size: @text-size;
+}
+
+header {
+	background-color: @background-color;
+	.section-spacing();
+
+	nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+
+	img {
+		margin: 3% 0 3% 0;
+	}
+
+	h1 {
+		font-size: 3rem;
+		text-decoration: underline;
+		margin-bottom: 1%;
+	}
+
+	h2 {
+		font-size: 2.4rem;
+	}
+}
