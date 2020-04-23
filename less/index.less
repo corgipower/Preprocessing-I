@@ -7,6 +7,11 @@
 	padding: 3%;
 }
 
+.list-style {
+	list-style-type: circle;
+	list-style-position: inside;
+}
+
 
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -77,6 +82,11 @@ body {
 	width: 60%;
 	margin: 0 auto;
 	font-size: @text-size;
+	border: 1px solid red;
+	height: auto;
+	@media ( max-width: 500px ) {
+		width: 90%;
+	}
 }
 
 header {
@@ -87,6 +97,10 @@ header {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
+		@media (max-width: 500px) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	img {
@@ -97,9 +111,55 @@ header {
 		font-size: 3rem;
 		text-decoration: underline;
 		margin-bottom: 1%;
+		@media ( max-width: 500px) {
+			text-decoration: none;
+			font-size: 2.5rem;
+			font-weight: bold;
+		}
 	}
 
 	h2 {
 		font-size: 2.4rem;
+	}
+}
+
+h3 {
+	font-size: @header3-size;
+	margin-bottom: 1%;
+}
+
+#skills {
+	.section-spacing();
+	ul {
+		.list-style();
+	}
+}
+
+#experience {
+	background-color: @background-color;
+	.section-spacing();
+	p {
+		font-size: 1.6rem;
+		@media ( max-width: 500px ) {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+#contact {
+	.section-spacing();
+	.img-box {
+		position: relative;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		a {
+			position: absolute;
+			bottom: 2%;
+			left: 4%;
+			color: black;
+			background-color: @background-color;
+		}
 	}
 }
